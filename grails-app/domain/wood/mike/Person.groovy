@@ -4,19 +4,11 @@ import org.springframework.data.redis.core.RedisHash
 
 @RedisHash("Person")
 class Person{
-    private String name
-    private Integer age
+    String name
+    Integer age
 
-    Person(String name, Integer age) {
+    Person(String name, Integer age) {      // constructor is required by spring/redis else save fails
         this.name = name
         this.age = age
-    }
-
-    String getName() {
-        return name
-    }
-
-    Integer getAge() {
-        return age
     }
 }
