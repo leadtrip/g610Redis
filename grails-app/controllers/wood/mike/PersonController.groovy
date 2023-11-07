@@ -5,7 +5,19 @@ class PersonController {
     PersonService personService
 
     def index() {
+        [people: personService.list()]
+    }
+
+    def show() {
+        render personService.show(params).orElseThrow(() -> new NotFoundException(params.id))
+    }
+
+    def add() {
         Person person = personService.addPerson()
-        render "Hello ${person.name}, you are ${person.age} years old"
+        render "Added ${person.toString()}"
+    }
+
+    def handleNotFoundException(NotFoundException ex) {
+        render ex.message
     }
 }

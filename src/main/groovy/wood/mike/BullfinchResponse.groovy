@@ -17,10 +17,6 @@ class BullfinchResponse {
 
 	@Override
 	String toString() {
-		return "BullfinchResponse{" +
-				"id='" + id + '\'' +
-				", styles=" + styles.size() +
-				", body='" + body + '\'' +
-				'}';
+		return styles[0] + body
 	}
 }

@@ -10,4 +10,12 @@ class PersonService {
         Person person = new Person( UUID.randomUUID().toString(),  ThreadLocalRandom.current().nextInt(0, 100))
         personRepository.save(person)
     }
+
+    def list() {
+        personRepository.findAll()
+    }
+
+    def show(params) {
+        personRepository.findById(params.id)
+    }
 }

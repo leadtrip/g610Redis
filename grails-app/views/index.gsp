@@ -69,6 +69,12 @@
                             <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
                         </li>
                     </g:each>
+                    <li>
+                        <g:link controller="person" action="add">Add person</g:link>
+                    </li>
+                    <li>
+                        <g:link controller="bullfinch" action="add">Add bullfinch response</g:link>
+                    </li>
                 </ul>
             </div>
         </section>

@@ -17,4 +17,12 @@ class BullfinchService{
         response.id = UUID.randomUUID().toString()
         response
     }
+
+    Optional<BullfinchResponse> getResponse(params) {
+        bullfinchResponseRepository.findById(params.id)
+    }
+
+    def list() {
+        bullfinchResponseRepository.findAll()
+    }
 }
