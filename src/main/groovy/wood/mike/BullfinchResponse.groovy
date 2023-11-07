@@ -14,7 +14,6 @@ class BullfinchResponse {
 		this.body = body
 	}
 
-
 	@Override
 	String toString() {
 		return styles[0] + body

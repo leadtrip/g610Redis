@@ -1,15 +1,16 @@
 package wood.mike
 
-import java.util.concurrent.ThreadLocalRandom
-
 class RedisController {
 
     RedisService redisService
 
-    def index() {
-        String userId = UUID.randomUUID().toString()
-        Integer randomId = ThreadLocalRandom.current().nextInt(0, 100)
-        redisService.addLink(userId, randomId)
-        render "Added $randomId for user $userId"
+    def addPersonHashMapper() {
+        Person person = redisService.addPersonHashMapper()
+        render "Added ${person.toString()}"
+    }
+
+    def addPersonJackson2HashMapper() {
+        Person person = redisService.addPersonJackson2HashMapper()
+        render "Added ${person.toString()}"
     }
 }

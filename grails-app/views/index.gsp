@@ -75,6 +75,12 @@
                     <li>
                         <g:link controller="bullfinch" action="add">Add bullfinch response</g:link>
                     </li>
+                    <li>
+                        <g:link controller="redis" action="addPersonHashMapper">Add Person using hash mapper</g:link>
+                    </li>
+                    <li>
+                        <g:link controller="redis" action="addPersonJackson2HashMapper">Add Person using jackson 2 hash mapper</g:link>
+                    </li>
                 </ul>
             </div>
         </section>

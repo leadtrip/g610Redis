@@ -37,3 +37,7 @@ Individual bullfinchresponses fields:
 `HGET bullfinchresponses:694cefd1-db49-4fb3-8aed-3feb69f25427 body`
 
 `HGET bullfinchresponses:694cefd1-db49-4fb3-8aed-3feb69f25427 styles.[0]` 
+
+Delete a hash
+
+`DEL bullfinchresponses:694cefd1-db49-4fb3-8aed-3feb69f25427`
