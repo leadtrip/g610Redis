@@ -13,4 +13,14 @@ class BullfinchResponse {
 		this.styles = styles
 		this.body = body
 	}
+
+
+	@Override
+	String toString() {
+		return "BullfinchResponse{" +
+				"id='" + id + '\'' +
+				", styles=" + styles.size() +
+				", body='" + body + '\'' +
+				'}';
+	}
 }
